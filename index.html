@@ -277,6 +277,30 @@
     }
     .schedule-content .title { font-weight: 600; font-size: 0.95rem; }
     .schedule-content .speaker-inline { color: var(--text-dim); font-size: 0.85rem; }
+    .schedule-content .session-theme {
+      font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem;
+    }
+    .schedule-content .session-format {
+      color: var(--text-dim); font-size: 0.85rem; margin-bottom: 1rem;
+    }
+    .talk-list { list-style: none; display: grid; gap: 0.85rem; }
+    .talk-list li {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: 10px; padding: 0.85rem 1rem;
+    }
+    .talk-meta {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .talk-role {
+      font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em;
+      font-weight: 700; padding: 0.18rem 0.45rem; border-radius: 4px;
+      background: rgba(34,197,94,0.1); color: var(--green);
+    }
+    .talk-role.keynote { background: var(--accent-glow); color: var(--accent-light); }
+    .talk-speaker { font-weight: 700; }
+    .talk-title { color: var(--text-dim); font-size: 0.9rem; line-height: 1.5; }
 
     /* ── Venue ── */
     .venue-card {
@@ -431,10 +455,10 @@
   <div class="container">
     <div class="logo"><span>GenAI</span> × Operations</div>
     <ul>
-      <li><a href="#register">Register</a></li>
-      <li><a href="#speakers">Speakers</a></li>
       <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#register">Register</a></li>
       <li><a href="#venue">Venue</a></li>
+      <li><a href="#organizers">Organizers</a></li>
     </ul>
   </div>
 </nav>
@@ -492,6 +516,158 @@
   </div>
 </section>
 
+<!-- Schedule -->
+<section id="schedule">
+  <div class="container">
+    <div class="section-label">Schedule</div>
+    <h2 class="section-title">Friday, May 8</h2>
+    <p class="section-desc">
+      A single-track day with four themed sessions. Each session has one keynote and three regular talks.
+    </p>
+
+    <div class="schedule-track">
+      <h3>📋 Program</h3>
+      <div class="schedule-item">
+        <div class="schedule-time">8:30 - 9:00</div>
+        <div class="schedule-content">
+          <div class="title">Breakfast</div>
+          <div class="speaker-inline">Board Rooms, 3rd floor</div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="schedule-time">9:00 - 10:30</div>
+        <div class="schedule-content">
+          <div class="session-theme">Session 1 · LLMs for operational decision-making</div>
+          <div class="session-format">1 keynote + 3 regular talks</div>
+          <ul class="talk-list">
+            <li>
+              <div class="talk-meta"><span class="talk-role keynote">Keynote</span><span class="talk-speaker">Yannai Gonczarowski</span></div>
+              <div class="talk-title">EconEvals: Benchmarks and Litmus Tests for LLM Agents in Unknown Environments</div>
+            </li>
+            <li>
+              <div class="talk-meta"><span class="talk-role">Talk</span><span class="talk-speaker">Yichun Hu</span></div>
+              <div class="talk-title">Ask, Clarify, Optimize: Human-LLM Agent Collaboration for Smarter Inventory Control</div>
+            </li>
+            <li>
+              <div class="talk-meta"><span class="talk-role">Talk</span><span class="talk-speaker">Jackie Baek</span></div>
+              <div class="talk-title">AI Agents for Inventory Control: Human-LLM-OR Complementarity</div>
+            </li>
+            <li>
+              <div class="talk-meta"><span class="talk-role">Talk</span><span class="talk-speaker">Linwei Xin</span></div>
+              <div class="talk-title">A Bitter Lesson for Retail Demand Forecasting: Evidence from Fine-Tuning Foundation Models</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="schedule-time">10:30 - 11:00</div>
+        <div class="schedule-content"><div class="title">Break</div></div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="schedule-time">11:00 - 12:30</div>
+        <div class="schedule-content">
+          <div class="session-theme">Session 2 · Human-AI interaction and implications</div>
+          <div class="session-format">1 keynote + 3 regular talks</div>
+          <ul class="talk-list">
+            <li>
+              <div class="talk-meta"><span class="talk-role keynote">Keynote</span><span class="talk-speaker">Francis de Vericourt</span></div>
+              <div class="talk-title">GenAI in Scientific Discovery: When to Use It, When It Helps, and When It Can Hurt</div>
+            </li>
+            <li>
+              <div class="talk-meta"><span class="talk-role">Talk</span><span class="talk-speaker">Zhen Lian</span></div>
+              <div class="talk-title">Algorithmic precision and human decision: A study of interactive optimization for human learning</div>
+            </li>
+            <li>
+              <div class="talk-meta"><span class="talk-role">Talk</span><span class="talk-speaker">Nikhil Garg</span></div>
+              <div class="talk-title">AI homogeneity and its downstream consequences</div>
+            </li>
+            <li>
+              <div class="talk-meta"><span class="talk-role">Talk</span><span class="talk-speaker">Guanting Chen</span></div>
+              <div class="talk-title">Lean-Atlas: Interpretation-Aware Agentic Proof Debugging for Real-World Mathematical Documents</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="schedule-time">12:30 - 2:00</div>
+        <div class="schedule-content">
+          <div class="title">Lunch</div>
+          <div class="speaker-inline">Board Rooms, 3rd floor</div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="schedule-time">2:00 - 3:30</div>
+        <div class="schedule-content">
+          <div class="session-theme">Session 3 · AI agents and replicas in markets and work</div>
+          <div class="session-format">1 keynote + 3 regular talks</div>
+          <ul class="talk-list">
+            <li>
+              <div class="talk-meta"><span class="talk-role keynote">Keynote</span><span class="talk-speaker">John Horton</span></div>
+              <div class="talk-title">Chaining Tasks, Redefining Work: A Theory of AI Automation</div>
+            </li>
+            <li>
+              <div class="talk-meta"><span class="talk-role">Talk</span><span class="talk-speaker">Akshit Kumar</span></div>
+              <div class="talk-title">What Is Your AI Agent Buying? Evaluation, Biases, Model Dependence, &amp; Emerging Implications for Agentic E-Commerce</div>
+            </li>
+            <li>
+              <div class="talk-meta"><span class="talk-role">Talk</span><span class="talk-speaker">Eugene Vinitsky</span></div>
+              <div class="talk-title">Your User Model is the Bottleneck: Building Assistive Agents through Self Play</div>
+            </li>
+            <li>
+              <div class="talk-meta"><span class="talk-role">Talk</span><span class="talk-speaker">George (Zhida) Gui</span></div>
+              <div class="talk-title">Leveraging LLMs to Improve Experimental Design: A Generative Stratification Approach</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="schedule-time">3:30 - 4:00</div>
+        <div class="schedule-content"><div class="title">Break</div></div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="schedule-time">4:00 - 5:30</div>
+        <div class="schedule-content">
+          <div class="session-theme">Session 4 · AI decision systems and deployment across industries</div>
+          <div class="session-format">1 keynote + 3 regular talks</div>
+          <ul class="talk-list">
+            <li>
+              <div class="talk-meta"><span class="talk-role keynote">Keynote</span><span class="talk-speaker">Athul Paul Jacob</span></div>
+              <div class="talk-title">Lessons from Diplomacy for Decision-Making in Critical Industries</div>
+            </li>
+            <li>
+              <div class="talk-meta"><span class="talk-role">Talk</span><span class="talk-speaker">Kaizheng Wang</span></div>
+              <div class="talk-title">Virtual Populations, Real Decisions: AI Personas for Human-Centered Inference</div>
+            </li>
+            <li>
+              <div class="talk-meta"><span class="talk-role">Talk</span><span class="talk-speaker">Andrew Li</span></div>
+              <div class="talk-title">Personalization with Transformers</div>
+            </li>
+            <li>
+              <div class="talk-meta"><span class="talk-role">Talk</span><span class="talk-speaker">Sharon (Xuan) Di</span></div>
+              <div class="talk-title">Smarter Transit, Faster Decisions: Transforming Transit Operations From Prediction to Decision-Making</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="schedule-time">6:00 - 9:00 PM</div>
+        <div class="schedule-content">
+          <div class="title">Reception at <a href="https://baylander.nyc/" target="_blank">Baylander</a></div>
+          <div class="speaker-inline">A waterfront reception aboard a historic boat on the Hudson</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Register -->
 <section id="register">
   <div class="container">
@@ -500,187 +676,6 @@
       <p>$25: students &nbsp;|&nbsp; $50: non-students</p>
       <p>We appreciate the generous support of the <a href="https://business.columbia.edu/ai-in-business" target="_blank">Columbia Business School AI in Business Initiative</a>.</p>
       <a class="btn-reg" href="https://www.eventbrite.com/e/genai-for-operational-decision-making-tickets-1985730462267?aff=oddtdtcreator" target="_blank">Register on Eventbrite</a>
-    </div>
-  </div>
-</section>
-
-<!-- Speakers -->
-<section id="speakers">
-  <div class="container">
-    <div class="section-label">Speakers</div>
-    <h2 class="section-title">The Lineup</h2>
-    <p class="section-desc">
-      Talks from researchers at the forefront of AI-driven operations.
-    </p>
-
-    <div class="speakers-grid">
-      <!-- Keynotes (alphabetical by last name) -->
-      <div class="speaker-card keynote">
-        <div class="speaker-tag keynote">Keynote</div>
-        <div class="speaker-name">Yannai Gonczarowski</div>
-        <div class="speaker-affil">Harvard Economics and Computer Science</div>
-      </div>
-
-      <div class="speaker-card keynote">
-        <div class="speaker-tag keynote">Keynote</div>
-        <div class="speaker-name">John Horton</div>
-        <div class="speaker-affil">MIT Sloan School of Management</div>
-      </div>
-
-      <div class="speaker-card keynote">
-        <div class="speaker-tag keynote">Keynote</div>
-        <div class="speaker-name">Athul Paul Jacob</div>
-        <div class="speaker-affil">Percepta.ai</div>
-      </div>
-
-      <div class="speaker-card keynote">
-        <div class="speaker-tag keynote">Keynote</div>
-        <div class="speaker-name">Francis de Vericourt</div>
-        <div class="speaker-affil">ESMT Berlin</div>
-      </div>
-
-      <!-- Talks (alphabetical by last name) -->
-      <div class="speaker-card">
-        <div class="speaker-tag talk">Talk</div>
-        <div class="speaker-name">Jackie Baek</div>
-        <div class="speaker-affil">NYU Stern School of Business</div>
-      </div>
-
-      <div class="speaker-card">
-        <div class="speaker-tag talk">Talk</div>
-        <div class="speaker-name">Guanting Chen</div>
-        <div class="speaker-affil">UNC Chapel Hill Department of Statistics and Operations Research</div>
-      </div>
-
-      <div class="speaker-card">
-        <div class="speaker-tag talk">Talk</div>
-        <div class="speaker-name">Sharon (Xuan) Di</div>
-        <div class="speaker-affil">Columbia Civil Engineering & Engineering Mechanics</div>
-      </div>
-
-      <div class="speaker-card">
-        <div class="speaker-tag talk">Talk</div>
-        <div class="speaker-name">Nikhil Garg</div>
-        <div class="speaker-affil">Cornell ORIE @ Cornell Tech</div>
-      </div>
-
-      <div class="speaker-card">
-        <div class="speaker-tag talk">Talk</div>
-        <div class="speaker-name">George (Zhida) Gui</div>
-        <div class="speaker-affil">Columbia Business School</div>
-      </div>
-
-      <div class="speaker-card">
-        <div class="speaker-tag talk">Talk</div>
-        <div class="speaker-name">Yichun Hu</div>
-        <div class="speaker-affil">Cornell Johnson Graduate School of Management</div>
-      </div>
-
-      <div class="speaker-card">
-        <div class="speaker-tag talk">Talk</div>
-        <div class="speaker-name">Akshit Kumar</div>
-        <div class="speaker-affil">Yale University Center for Algorithms, Data and Market Design</div>
-      </div>
-
-      <div class="speaker-card">
-        <div class="speaker-tag talk">Talk</div>
-        <div class="speaker-name">Andrew Li</div>
-        <div class="speaker-affil">CMU Tepper School of Business</div>
-      </div>
-
-      <div class="speaker-card">
-        <div class="speaker-tag talk">Talk</div>
-        <div class="speaker-name">Zhen Lian</div>
-        <div class="speaker-affil">Yale School of Management</div>
-      </div>
-
-      <div class="speaker-card">
-        <div class="speaker-tag talk">Talk</div>
-        <div class="speaker-name">Eugene Vinitsky</div>
-        <div class="speaker-affil">NYU Civil Engineering, Percepta.ai</div>
-      </div>
-
-      <div class="speaker-card">
-        <div class="speaker-tag talk">Talk</div>
-        <div class="speaker-name">Kaizheng Wang</div>
-        <div class="speaker-affil">Columbia IEOR</div>
-      </div>
-
-      <div class="speaker-card">
-        <div class="speaker-tag talk">Talk</div>
-        <div class="speaker-name">Linwei Xin</div>
-        <div class="speaker-affil">Cornell ORIE</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Schedule -->
-<section id="schedule">
-  <div class="container">
-    <div class="section-label">Schedule</div>
-    <h2 class="section-title">Friday, May 8</h2>
-    <p class="section-desc">
-      Four sessions across the day; each session consists of 1 keynote + 3 shorter talks.
-    </p>
-
-    <div class="schedule-track">
-      <h3>📋 Program Overview</h3>
-      <div class="schedule-item">
-        <div class="schedule-time">8:30 - 9:00</div>
-        <div class="schedule-content">
-          <div class="title">Breakfast</div>
-        </div>
-      </div>
-      <div class="schedule-item">
-        <div class="schedule-time">9:00 - 10:30</div>
-        <div class="schedule-content">
-          <div class="title">Session 1</div>
-        </div>
-      </div>
-      <div class="schedule-item">
-        <div class="schedule-time">10:30 - 11:00</div>
-        <div class="schedule-content">
-          <div class="title">Break</div>
-        </div>
-      </div>
-      <div class="schedule-item">
-        <div class="schedule-time">11:00 - 12:30</div>
-        <div class="schedule-content">
-          <div class="title">Session 2</div>
-        </div>
-      </div>
-      <div class="schedule-item">
-        <div class="schedule-time">12:30 - 2:00</div>
-        <div class="schedule-content">
-          <div class="title">Lunch</div>
-        </div>
-      </div>
-      <div class="schedule-item">
-        <div class="schedule-time">2:00 - 3:30</div>
-        <div class="schedule-content">
-          <div class="title">Session 3</div>
-        </div>
-      </div>
-      <div class="schedule-item">
-        <div class="schedule-time">3:30 - 4:00</div>
-        <div class="schedule-content">
-          <div class="title">Break</div>
-        </div>
-      </div>
-      <div class="schedule-item">
-        <div class="schedule-time">4:00 - 5:30</div>
-        <div class="schedule-content">
-          <div class="title">Session 4</div>
-        </div>
-      </div>
-      <div class="schedule-item">
-        <div class="schedule-time">6:00 - 9:00 PM</div>
-        <div class="schedule-content">
-          <div class="title">Reception at <a href="https://baylander.nyc/" target="_blank">Baylander</a></div>
-          <div class="speaker">A waterfront reception aboard a historic boat on the Hudson</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
